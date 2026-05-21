@@ -1,0 +1,2 @@
+Hello from GitHub web interface.
+Learning DevOps practically.
