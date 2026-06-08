@@ -13,7 +13,7 @@ pipeline {
             steps {
                 sshagent(credentials: ['aws-ec2-key']) {
                     sh '''
-                    ssh -o StrictHostKeyChecking=no ubuntu@http://35.169.191.15 "
+                    ssh -o StrictHostKeyChecking=no ubuntu@35.169.191.15 "
                     cd ~/devops-practice &&
                     git pull &&
                     docker build -t aws-test-app . &&
