@@ -2,6 +2,13 @@ pipeline {
     agent any
 
     stages {
+
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
         stage('Deploy to AWS') {
             steps {
                 sshagent(credentials: ['aws-ec2-key']) {
